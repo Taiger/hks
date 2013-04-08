@@ -2,9 +2,7 @@
 
 /**
  * Implements hook_css_alter().
- * @TODO: Once http://drupal.org/node/901062 is resolved, determine whether
- * this can be implemented in the .info file instead.
- *
+ * Clearer than omitting in .info file.
  * Omitted:
  * - color.css
  * - contextual.css
@@ -53,45 +51,6 @@ function hks_css_alter(&$css) {
   $css = array_diff_key($css, $exclude);
 }
 
-/**
- * Implementation of hook_theme().
- */
-/*function hks_theme() {
-  $items = array();*/
-
-  // Consolidate a variety of theme functions under a single template type.
-/*  $items['block'] = array(
-    'arguments' => array('block' => NULL),
-    'template' => 'object',
-    'path' => drupal_get_path('theme', 'hks') .'/templates',
-  );
-  $items['comment'] = array(
-    'arguments' => array('comment' => NULL, 'node' => NULL, 'links' => array()),
-    'template' => 'object',
-    'path' => drupal_get_path('theme', 'hks') .'/templates',
-  );
-  $items['node'] = array(
-    'arguments' => array('node' => NULL, 'teaser' => FALSE, 'page' => FALSE),
-    'template' => 'node',
-    'path' => drupal_get_path('theme', 'hks') .'/templates',
-  );
-  $items['fieldset'] = array(
-    'arguments' => array('element' => array()),
-    'template' => 'fieldset',
-    'path' => drupal_get_path('theme', 'hks') .'/templates',
-  );*/
-
-/*  // Split out pager list into separate theme function.
-  $items['pager_list'] = array('arguments' => array(
-    'tags' => array(),
-    'limit' => 10,
-    'element' => 0,
-    'parameters' => array(),
-    'quantity' => 9,
-  ));
-
-  return $items;
-}*/
 
 /**
  * Preprocess functions ===============================================
@@ -111,15 +70,32 @@ function hks_preprocess_page(&$vars) {
   $vars['primary_local_tasks'] = menu_primary_local_tasks();
   $vars['secondary_local_tasks'] = menu_secondary_local_tasks();
 
-  // Link site name to frontpage
-  //$vars['site_name'] = l($vars['site_name'], '<front>');
-  
-/*  if(isset($vars['node'])){ //Tai custom -- hide title on nodes.. show in node
-    $vars['title'] = '';
-  }*/
+  /*
+    USER ACCOUNT
+    Removes the tabs from user  login, register & password
+    fixes the titles to so no more "user account" all over
+  */
+  switch (current_path()) {
+    case 'user':
+      $vars['title'] = t('Login');
+      unset( $vars['primary_local_tasks'] );
+      break;
+    case 'user/register':
+      $vars['title'] = t('New account');
+      unset( $vars['primary_local_tasks'] );
+      break;
+    case 'user/password':
+      $vars['title'] = t('I forgot my password');
+      unset( $vars['primary_local_tasks'] );
+      break;
 
-  $vars['main_menu'] = theme('links', array('links' => $vars['main_menu'], 'attributes' => array('class' => 'links main-menu main-nav fix')));
-  $vars['secondary_menu'] = theme('links', array('links' => $vars['secondary_menu'], 'attributes' => array('class' => 'links secondary-menu fix')));
+    default:
+      # code...
+      break;
+  }
+
+  //$vars['main_menu'] = theme('links', array('links' => $vars['main_menu'], 'attributes' => array('class' => 'links main-menu main-nav fix')));
+  //$vars['secondary_menu'] = theme('links', array('links' => $vars['secondary_menu'], 'attributes' => array('class' => 'links secondary-menu fix')));
 
 // calculate main width based on sidebar visibility
   $grid = 12;
@@ -138,7 +114,6 @@ function hks_preprocess_page(&$vars) {
   $vars['sidebar_first_class'] = 'col_' . $side1;
   $vars['sidebar_second_class'] = 'col_' . $side2;
 
-  //$vars['grid_class'] = 'col_' . $grid;
 }
 
 /**
@@ -147,13 +122,14 @@ function hks_preprocess_page(&$vars) {
 function hks_preprocess_block(&$vars) {
   $vars['hook'] = 'block';
 
-  //$vars['attributes_array']['class'][] = $vars['block_html_id'];
+  $vars['attributes_array']['class'][] = $vars['block_html_id'];
 
   $vars['title_attributes_array']['class'][] = 'block-title';
   $vars['title_attributes_array']['class'][] = 'clearfix';
 
   $vars['content_attributes_array']['class'][] = 'block-content';
   $vars['content_attributes_array']['class'][] = 'clearfix';
+
   if ($vars['block']->module == 'block') {
     $vars['content_attributes_array']['class'][] = 'prose';
   }
@@ -170,7 +146,7 @@ function hks_preprocess_block(&$vars) {
     $vars['classes_array'][] = 'block-page-content';
   }
 
-/* col_9 column  */
+/* col_9 column  
 if ($vars['block']->delta === 'main-menu') {
     $vars['classes_array'][] = 'column';
     $vars['classes_array'][] = 'col_9';
@@ -180,30 +156,7 @@ if ($vars['block']->delta === 'user-menu') {
     $vars['classes_array'][] = 'column';
     $vars['classes_array'][] = 'col_3';
 }
-
-      /*-
-      USER ACCOUNT
-      Removes the tabs from user  login, register & password
-      fixes the titles to so no more "user account" all over
-    */
-/*    switch (current_path()) {
-      case 'user':
-        $vars['title'] = t('Login');
-        unset( $vars['tabs'] );
-        break;
-      case 'user/register':
-        $vars['title'] = t('New account');
-        unset( $vars['tabs'] );
-        break;
-      case 'user/password':
-        $vars['title'] = t('I forgot my password');
-        unset( $vars['tabs'] );
-        break;
-
-      default:
-        # code...
-        break;
-    }*/
+*/
 
 }
 
@@ -231,20 +184,15 @@ function hks_preprocess_node(&$vars) {
     $vars['post_object']['comments'] = $vars['content']['comments'];
     unset($vars['content']['comments']);
   }
-  //dpm($vars['submitted']);
-// added date format wordpress_style as l, F j, Y
+  
+// Submitted area done Wordpress style
   if ($vars['display_submitted']) {
-
-
    $submitted = '<span class="sword">' . t('by') . ' </span><span class="author vcard fn">' . $vars['name'] . '</span>';
    $submitted .= '<span class="sword"> ' . t('on') . '</span> ' . format_date($vars['changed'], $type = 'custom', $format = 'l\, F j\, Y');
    $submitted .= ' · ' . '<a href="'.$vars['node_url'].'#comments">' . format_plural($vars['comment_count'], '1 Comment', '@count Comments') .'</a>';
    $vars['submitted'] = $submitted;
   }
 
-
-
-  $vars['node_title'] = drupal_get_title(); //Tai custom -- hide title on pagess.. show in node
 }
 
 /**
@@ -300,7 +248,7 @@ function hks_preprocess_fieldset(&$vars) {
 function hks_preprocess_field(&$vars) {
   // Add prose class to long text fields.
   if ($vars['element']['#field_type'] === 'text_with_summary') {
-    $vars['classes_array'][] = 'text-with-summary';
+    $vars['classes_array'][] = 'prose';
   }
 }
 
