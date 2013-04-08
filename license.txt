@@ -1,9 +1,11 @@
 ====================================================================================================================
 Copyright for HTML Kickstart Drupal Theme
 ====================================================================================================================
-Drupal Theme Under the MIT Open Source License.
-Copyright © 2011-2013 Tai Travis http://newsparkdesigns.com | New Spark Designs
-Drupal.org/project/hks
+HTML Kickstart for Drupal is released under the GNU GENERAL PUBLIC LICENSE, Version 3
+http://www.gnu.org/licenses/gpl.html
+Drupal Theme by Tai Travis
+http://newsparkdesigns.com | New Spark Designs
+Contact me at http://newsparkdesigns.com/contact
 
 ====================================================================================================================
 Original Copyright for HTML Kickstart

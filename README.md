@@ -1,34 +1,36 @@
+HTML Kickstart For Drupal is an ultra–lean theme that utilizes the CSS and JS helper framework from Lime99. It is a responsive layout system with optional 12-grid columns. It utilizes vector Font Awesome Icons!
 
-# HMTL KickStart #
-by Joshua Gatcke
-http://www.99lime.com
-Version: 0.94
+In the spirit of Mothership and modern standards a lot of the Drupal frontend has been cleaned up in this theme. Though it is not as comprehensive as Mothership this theme could cause layout issues. This is migitaged by the to the responsive layout system. So far I have found that the layouts to be remarkably robust considering how little CSS is behind it.
 
-## What is HTML KickStart? ##
+This is intended to be used as a base theme. However, feel free to fork it and shape to your liking!
 
-HTML KickStart is an ultra–lean set of HTML5, CSS, and jQuery (javascript) files, layouts, and elements designed to give you a headstart and save you 10's of hours on your next web project. 
+I borrowed heavily from Mothership, Zen and Tao themes. The meta info portion was from a Wordpress port I was working on so you notice a similarity.
 
-HTML KickStart includes everything you need to rapidly create website layouts – things like slideshows, menus, flexible grids, image placeholders, buttons, and more – saving you a ton of time so you can produce faster and make more money.
+Read more about HTML Kickstart here:
+http://www.99lime.com/elements/
 
-Bonus! All HTML KickStart Elements are fully Browser tested, they even gracefully degrade ;)
+Needed:
+Testers!
+Tell what breaks and where.
 
-## Perfect for Wireframing in HTML ##
-
-HTML KickStart has everything you need to rapidly create HTML Page Layouts, perfect for Wireframing in HTML. 
-Layouts that used to take hours now take minutes.
-
-## Getting Started ##
-
-1. Download HTML KickStart
-2. Open blank.html in your favorite text editor
-3. Start adding KickStart Elements to blank.html: (http://www.99lime.com/elements/)
-4. Save blank.html and open in your favorite Web Browser
-5. Have fun!
+TODO:
+Move most of this stuff into cached theme settings ala Omega.
 
 
-## HTML KickStart is FREE and Open Source. ##
-### Release Under the MIT Open Source License. ###
 
+====================================================================================================================
+Copyright for HTML Kickstart Drupal Theme
+====================================================================================================================
+HTML Kickstart for Drupal is released under the GNU GENERAL PUBLIC LICENSE, Version 3
+http://www.gnu.org/licenses/gpl.html
+Drupal Theme by Tai Travis
+http://newsparkdesigns.com | New Spark Designs
+Contact me at http://newsparkdesigns.com/contact
+
+====================================================================================================================
+Original Copyright for HTML Kickstart
+====================================================================================================================
+Release Under the MIT Open Source License.
 Copyright © 2011-2012 Joshua Gatcke http://www.99lime.com | HTML KickStart
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
