@@ -1,0 +1,257 @@
+
+	99Lime.com HTML KickStart by Joshua Gatcke
+	style.css
+	
+*/
+
+/*---------------------------------
+	IMPORTS
+-----------------------------------*/
+@import url(http://fonts.googleapis.com/css?family=Arimo:400,700);
+
+/*---------------------------------
+	FONTS
+-----------------------------------*/
+h1,h2,h3,h4,h5,h6{
+font-family: "Arimo", arial, verdana, sans-serif;
+font-weight:normal;
+}
+
+thead th,
+tbody th{
+font-family: "Arimo", arial, verdana, sans-serif;
+}
+
+button,
+a.btn,
+input[type="submit"],
+input[type="reset"],
+input[type="button"]{
+font-family: "Arimo", arial, verdana, sans-serif;
+}
+
+.menu{
+font-family: "Arimo", arial, verdana, sans-serif;
+}
+
+blockquote{
+font-family: "Arimo", arial, verdana, sans-serif;
+}
+/*---------------------------------
+	OVERRIDES
+-----------------------------------*/
+a {
+	text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 1.6em;
+}
+
+/*---------------------------------
+	LAYOUT
+-----------------------------------*/
+body{
+margin:0;
+padding:0 0 0 0;
+color:#000;
+background:#efefef url(css/img/gray_jean.png);
+font:normal 0.9em/150% 'Arimo', arial, verdana, sans-serif;
+text-shadow: 0px 0px 1px transparent; /* google font pixelation fix */
+}
+
+/*---------------------------------
+	EXTRA UNUSED CLASSES
+-----------------------------------*/
+.wrap{
+width:100%;
+background:#fff;
+margin:30px auto 30px auto;
+padding:0 2%;
+border:1px solid #ccc;
+}
+
+
+.footer{
+padding:20px;
+margin:0;
+border-top:1px solid #ddd;
+color:#999;
+font-size:0.8em;
+text-shadow:0px 1px 1px #fff;
+position: relative;
+top:0;
+left:0;
+background:#fff;
+clear:both;
+}
+
+	.link-top{
+	display:none;
+	}
+	
+/* NAV BAR*/
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width: 100%;
+background:#000;
+color:#fff;
+z-index:1000;
+}
+
+	.navbar .logo{
+	position:absolute;
+	top:0;
+	right:0;
+	padding:0.5em 1em;
+	font-size: 1.7em;
+	color:#efefef;
+	text-decoration:none;
+	}
+	
+	.navbar span{
+	color:#86dc00;
+	}
+	
+	
+	.navbar ul{
+	display:inline-block;
+	margin:0;
+	padding:0;
+	}
+	
+		.navbar li{
+		margin:0;
+		padding:0;
+		list-style-type:0;
+		display:inline-block;
+		}
+		
+		.navbar li a{
+		display:inline-block;
+		color:#efefef;
+		padding:1em 1.3em;
+		text-decoration:none;
+		text-transform: uppercase;
+		line-height:100%;
+		font-size: 1.2em;
+		}
+		
+.callout{
+background:#4598ef;/*#86dc00;*/
+padding:3em 0;
+color:#fff;
+box-shadow:inset 0px 0px 10px rgba(0,0,0,0.2);
+text-align: center;
+text-shadow:0px 1px 3px rgba(0,0,0,0.2);
+display:block;
+}
+	.callout + div.grid{margin-top:50px;}
+	 a.callout{cursor:pointer;}
+	 .callout i.icon-4x{font-size:6em;}
+	 .callout h4{margin-bottom:30px;}
+	 .callout-top{margin:50px 0 0 0;}
+	 .callout p{margin-bottom:0;}
+	 .callout .button{margin-top:10px;}
+	 .callout.green{background:#19ad0b;/*#86dc00;*/}
+	 
+.mc_embed_signup{
+padding:30px 0;
+}
+
+.ui-preview{
+border:5px solid #ddd;
+margin:30px 0;
+display:block;
+}
+
+/*---------------------------------
+	DRUPAL
+-----------------------------------*/
+
+.element-invisible {
+	display: none;
+}
+.clearfix:after {
+	display: table;
+	content: "";
+	clear:both;
+}
+/*---------------------------------
+	DRUPAL
+-----------------------------------*/
+.messages {
+  margin:0 auto;
+  padding: 0 70px;
+}
+.messages li {
+  list-style: none;
+}
+/*some spacing to edit, and preview buttons */
+.edit-actions > input{
+	margin:10px;
+}
+/* new */
+.marker {
+position: absolute;
+color: rgba(249,191,74,0.6); /*orange*/
+}
+/* inline links simple styling */
+.node-links li {
+	list-style: none;
+	display: inline-block;
+	padding-left: 1em;
+}
+/* show current page pager button */
+.pager.button-bar .current,
+.pager.button-bar .current a {
+border-left-color:#ddd;
+background: rgba(231, 231, 231, 1);
+box-shadow: 5px 3px 9px rgba(209, 209, 209, 1) inset;
+color: #aaa;
+}
+/*customize by line */
+.node-submitted {
+	color:#777;
+}
+.sword {
+	color:#999;
+	font-style: italic;
+	font-size: 0.8em;
+}
+.author {
+	text-transform: capitalize;
+}
+/*---------------------------------
+	BLOCK SYSTEMS
+-----------------------------------*/
+
+.block h2,
+.block h3,
+.block h4,
+.block h5,
+.block h6 {
+	font-size: 1em;
+}
+/* keep textarea from overflowing  */
+.block fieldset,
+.block textarea {
+width:97%;
+margin-left: 0.83333333333333%;
+margin-right: 0.83333333333333%;
+margin-top: 0.5em;
+margin-bottom: 0.5em;
+float: left;
+display: block;
+}
+/*---------------------------------
+	COMMENT FORM
+-----------------------------------*/
+.comment #edit-subject {
+	display: block;
+}
+.comment .username {
+	text-transform: capitalize;
+}
