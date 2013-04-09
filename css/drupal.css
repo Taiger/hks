@@ -12,6 +12,20 @@
   display:none;
   }
 */
+
+
+/* keep textarea from overflowing  */
+.block fieldset,
+.block textarea {
+width:97%;
+margin-left: 0.83333333333333%;
+margin-right: 0.83333333333333%;
+margin-top: 0.5em;
+margin-bottom: 0.5em;
+float: left;
+display: block;
+}
+
 /**
  * openid/openid.css ==================================================
  
@@ -177,7 +191,7 @@ dl.multiselect dd.a .form-item { width:8em; }
 /**
  * Animated throbber
  */
-html.js input.throbbing { background:transparent url(img/drupal/throbber.gif) 100% 50% no-repeat; }
+html.js input.throbbing { background:transparent url(drupal/throbber.gif) 100% 50% no-repeat; }
 
 /**
  * Resizable text areas
@@ -207,10 +221,21 @@ a.tabledrag-handle:hover { text-decoration:none; }
 a.tabledrag-handle .handle {
   height:20px;
   width:20px;
-  background:url(img/drupal/draggable.png) 0px 0px no-repeat;
+  background:url(drupal/draggable.png) 0px 0px no-repeat;
   }
 
 a.tabledrag-handle-hover .handle { background-position:0px -20px; }
+
+/* block admin fix - show element as it is dragged */
+.drag {
+    outline: 2px dashed #EB6666; 
+}
+.draggable.drag-previous {
+  outline: 2px dashed #9CEB66;
+}
+.region-title {
+  font-weight: bold;
+}
 /*
 div.indentation {
   width:20px;
@@ -218,9 +243,9 @@ div.indentation {
   float:left;
   }
 
-div.tree-child { background:url(img/drupal/tree.png) no-repeat 10px 50%; }
-div.tree-child-last { background:url(img/drupal/tree-bottom.png) no-repeat 10px 50%; }
-div.tree-child-horizontal { background:url(img/drupal/tree.png) no-repeat -10px 50%; }*/
+div.tree-child { background:url(drupal/tree.png) no-repeat 10px 50%; }
+div.tree-child-last { background:url(drupal/tree-bottom.png) no-repeat 10px 50%; }
+div.tree-child-horizontal { background:url(drupal/tree.png) no-repeat -10px 50%; }*/
 
 /**
  * Teaser splitter
@@ -250,7 +275,7 @@ html.js .no-js { display:none; }
 .progress { font-weight:bold; }
 
 .progress .bar {
-  background:#fff url(img/drupal/progress.gif);
+  background:#fff url(drupal/progress.gif);
   border:1px solid #035;
   height:18px;
   }
@@ -268,7 +293,7 @@ html.js .no-js { display:none; }
 .ahah-progress .throbber {
   width:20px;
   height:20px;
-  background:transparent url(img/drupal/throbber.gif) 50% 50% no-repeat;
+  background:transparent url(drupal/throbber.gif) 50% 50% no-repeat;
   float:left;
   }
 
@@ -359,8 +384,9 @@ html.js .js-hide { display:none; }
 
 .vertical-tabs .vertical-tabs-list {
   float:left;
+  list-style: none;
   width:200px;
-  margin-left:-200px;
+  /*margin-left:-200px;*/
   }
 
 .vertical-tabs .vertical-tabs-panes .vertical-tabs-pane {
@@ -374,3 +400,12 @@ html.js .js-hide { display:none; }
  
 /*  MESSAGES ===============================
 */
+/*  MISC DRUPAL ===============================
+*/
+.links li {
+  list-style: none;
+}
+.description{
+  font-size: 0.8em;
+  color:#777;
+}

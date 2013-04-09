@@ -1,7 +1,6 @@
-
-	99Lime.com HTML KickStart by Joshua Gatcke
-	style.css
-	
+/*
+ * SITE SPECIFIC STYLING
+ * ( to subtheme: restyle this file :)
 */
 
 /*---------------------------------
@@ -47,7 +46,21 @@ a {
 h1, h2, h3, h4, h5, h6 {
   font-size: 1.6em;
 }
-
+/*---------------------------------
+	FORM OVERRIDES
+-----------------------------------*/
+/* add some top space for text inputs */
+input.form-text {
+	margin-top:10px;
+}
+select.form-select {
+	margin:10px 0;
+}
+/* block admin page fix */
+.page-admin-structure-block th,
+.page-admin-structure-block td {
+	padding:0;
+}
 /*---------------------------------
 	LAYOUT
 -----------------------------------*/
@@ -212,7 +225,7 @@ background: rgba(231, 231, 231, 1);
 box-shadow: 5px 3px 9px rgba(209, 209, 209, 1) inset;
 color: #aaa;
 }
-/*customize by line */
+/*customize submitted byline */
 .node-submitted {
 	color:#777;
 }
@@ -225,7 +238,37 @@ color: #aaa;
 	text-transform: capitalize;
 }
 /*---------------------------------
-	BLOCK SYSTEMS
+	VERTICAL TABS
+-----------------------------------*/
+.vertical-tab-button {
+  background-color: #EEEEEE;
+  text-shadow:-1px 0 2px white;
+  margin: 6px 10px 0 0;
+  padding: 3px;
+}
+
+.vertical-tab-button strong,
+.vertical-tab-button a {
+	color:#777;
+	}
+.vertical-tab-button:hover strong,
+.vertical-tab-button.selected strong {
+	color:#333;
+}
+.vertical-tab-button:hover,
+.vertical-tab-button.selected {
+	background-color: #ddd;
+}
+.vertical-tab-button .summary {
+	font-style: italic;
+	}
+
+.vertical-tabs .vertical-tabs-panes .vertical-tabs-pane {
+	border: 1px solid #ddd;
+	padding: 6px 0 0 10px;
+}
+/*---------------------------------
+	BLOCKS
 -----------------------------------*/
 
 .block h2,
@@ -235,17 +278,7 @@ color: #aaa;
 .block h6 {
 	font-size: 1em;
 }
-/* keep textarea from overflowing  */
-.block fieldset,
-.block textarea {
-width:97%;
-margin-left: 0.83333333333333%;
-margin-right: 0.83333333333333%;
-margin-top: 0.5em;
-margin-bottom: 0.5em;
-float: left;
-display: block;
-}
+
 /*---------------------------------
 	COMMENT FORM
 -----------------------------------*/
