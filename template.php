@@ -56,7 +56,10 @@ function hks_css_alter(&$css) {
  * Preprocess functions ===============================================
  */
 function hks_preprocess_html(&$vars) {
-  //drupal_set_message('yes!','notice');
+  if(!module_exists('jquery_update')){
+    drupal_set_message('This theme requires the jQuery Update module.','notice');
+  }
+  
   $vars['classes_array'][] = 'hks';
   //drupal_flush_all_caches()
   //cache_clear_all(); //TODO
