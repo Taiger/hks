@@ -3,6 +3,7 @@ description = HTML Kickstart Framework - Ultra–Lean HTML5, CSS, & JS Building 
 for Rapid Website Production http://www.99lime.com
 engine = phptemplate
 name = hks
+version = 0.1
 
 ; Regions =====================================================================
 
@@ -17,11 +18,6 @@ regions[page_bottom] = Page bottom
 regions[highlighted] = Highlighted
 
 ; Stylesheets =================================================================
-
-;stylesheets[screen][] = css/normalize.css
-;stylesheets[all][] = base.css
-;stylesheets[screen][] = drupal.css
-; ==== TODO remove above ====
 
 stylesheets[screen][] = css/kickstart.css
 stylesheets[screen][] = css/drupal.css
