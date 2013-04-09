@@ -1,10 +1,10 @@
-HTML Kickstart For Drupal is an ultra–lean theme that utilizes the CSS and JS helper framework from Lime99. It is a responsive layout system with optional 12-grid columns. It utilizes vector Font Awesome Icons!
+HTML Kickstart For Drupal is an ultra-lean theme that utilizes the CSS and JS helper framework from Lime99. It is a responsive layout system with optional 12-grid columns. It utilizes vector Font Awesome Icons!
 
-In the spirit of Mothership and modern standards a lot of the Drupal frontend has been cleaned up in this theme. Though it is not as comprehensive as Mothership this theme could cause layout issues. This is migitaged by the to the responsive layout system. So far I have found that the layouts to be remarkably robust considering how little CSS is behind it.
+In the spirit of Mothership and modern standards a lot of the Drupal frontend has been cleaned up in this theme. Though it is not as comprehensive as Mothership this theme could cause layout issues. This is mitigated by the responsive layout. So far I have found that the layouts to be remarkably robust considering how little CSS is behind it.
 
 This is intended to be used as a base theme. However, feel free to fork it and shape to your liking!
 
-I borrowed heavily from Mothership, Zen and Tao themes. The meta info portion was from a Wordpress port I was working on so you notice a similarity.
+I borrowed from Mothership, Zen and Tao themes. With almost all default CSS removed it has a whole new look for theme as well. I wasn't intending it to be for an admin theme as well, but so far it works great.
 
 Read more about HTML Kickstart here:
 http://www.99lime.com/elements/
