@@ -11,24 +11,28 @@ attach: function(context, settings) {
 	/*---------------------------------
 		MENU Dropdowns
 	-----------------------------------*/
-	$('ul.menu').each(function(){
-		// add the menu toggle
-		$(this).prepend('<li class="menu-toggle"><a href="#"><span class="icon" data-icon="Y"></span> Menu</a></li>');
+	if(FALSE){ // disabled
+		// @TODO toggle dropdown menu presence per page
+		// @TODO add this condionally
 
-		// find menu items with children.
-		$(this).find('li').has('ul').addClass('has-menu')
-		.find('a:first').append('<span class="arrow">&nbsp;</span>');
-	});
-
-	$('ul.menu li').hover(function(){
-		$(this).find('ul:first').stop(true, true).fadeIn('fast');
-		$(this).addClass('hover');
-	},
-	function(){
-		$(this).find('ul').stop(true, true).fadeOut('slow');
-		$(this).removeClass('hover');
-	});
-
+		$('ul.menu').each(function(){
+			// add the menu toggle
+			$(this).prepend('<li class="menu-toggle"><a href="#"><span class="icon" data-icon="Y"></span> Menu</a></li>');
+	
+			// find menu items with children.
+			$(this).find('li').has('ul').addClass('has-menu')
+			.find('a:first').append('<span class="arrow">&nbsp;</span>');
+		});
+	
+		$('ul.menu li').hover(function(){
+			$(this).find('ul:first').stop(true, true).fadeIn('fast');
+			$(this).addClass('hover');
+		},
+		function(){
+			$(this).find('ul').stop(true, true).fadeOut('slow');
+			$(this).removeClass('hover');
+		});
+	}
 	/*---------------------------------
 		Slideshow
 	-----------------------------------*/
@@ -167,6 +171,7 @@ attach: function(context, settings) {
 	/*---------------------------------
 		Table Sort
 	-----------------------------------*/
+	//@TODO compare with native Drupal behaviors
 	// init
 	var aAsc = [];
 	$('table.sortable').each(function(){
@@ -200,6 +205,7 @@ attach: function(context, settings) {
 	/*---------------------------------
 		CSS Helpers
 	-----------------------------------*/
+	// @TODO fix this tripe
 	if($.browser.msie){ $('body').addClass('msie'); }
 	$('input[type=checkbox]').addClass('checkbox');
 	$('input[type=radio]').addClass('radio');
