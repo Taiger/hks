@@ -1,11 +1,22 @@
 <div class='header-region clearfix'>
 <div id='branding'>
   <h1 class='site-name'>
-    <img src="<?php print $logo ?>" alt="<?php print $site_name ?>" />
+    <a class="logo" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" >
+      <?php if ($logo): ?>
+        <img src="<?php print $logo ?>" alt="<?php print $site_name ?>" />
+      <?php else: ?>
+        <?php print $site_name ?>
+      <?php endif; ?>
+    </a>
   </h1>
+  <?php if ($site_slogan): ?>
+    <i class="slogan">
+      <?php print $site_slogan ?>
+    </i>
+  <?php endif; ?>
 </div>
     <?php print render($page['header']) ?>
-  </div>
+</div>
 
 <div class="grid flex">
 
