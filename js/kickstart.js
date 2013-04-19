@@ -11,7 +11,7 @@ attach: function(context, settings) {
 	/*---------------------------------
 		MENU Dropdowns
 	-----------------------------------*/
-	if(FALSE){ // disabled
+	if(false){ // disabled
 		// @TODO toggle dropdown menu presence per page
 		// @TODO add this condionally
 

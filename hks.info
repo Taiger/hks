@@ -28,13 +28,16 @@ stylesheets[screen][] = css/custom.css
 
 ;  = jquery plugins = 
 scripts[] = js/jquery_plugins/html5shiv_3.6.2.min.js
-scripts[] = js/jquery_plugins/fitvids_1.0.min.js
-scripts[] = js/jquery_plugins/prettify.min.js
-scripts[] = js/jquery_plugins/fancybox.min.js
-scripts[] = js/jquery_plugins/placeholderp.min.js
-scripts[] = js/jquery_plugins/tiptip_1.3.min.js
-scripts[] = js/jquery_plugins/bxslider_v4.0.min.js
+
+; DISABLED JS for kickstarter - @TODO conditionally add these
+
+;scripts[] = js/jquery_plugins/fitvids_1.0.min.js
+;scripts[] = js/jquery_plugins/prettify.min.js
+;scripts[] = js/jquery_plugins/fancybox.min.js
+;scripts[] = js/jquery_plugins/placeholderp.min.js
+;scripts[] = js/jquery_plugins/tiptip_1.3.min.js
+;scripts[] = js/jquery_plugins/bxslider_v4.0.min.js
 
 ; = HTML Kickstarter = 
 ; @TODO break this file up
-scripts[] = js/kickstart.js
+;scripts[] = js/kickstart.js
