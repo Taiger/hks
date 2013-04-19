@@ -41,3 +41,6 @@ scripts[] = js/jquery_plugins/html5shiv_3.6.2.min.js
 ; = HTML Kickstarter = 
 ; @TODO break this file up
 ;scripts[] = js/kickstart.js
+
+; PLUGINS
+ plugins[panels][layouts] = panels/layouts
