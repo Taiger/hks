@@ -409,3 +409,8 @@ html.js .js-hide { display:none; }
   font-size: 0.8em;
   color:#777;
 }
+/* allow for selecting nested contextual links */
+.node.contextual-links-region {
+    top: 20px;
+    margin-bottom: 20px;
+}
