@@ -29,12 +29,10 @@
 
 <div class='navigation clearfix'>
   <?php if (isset($main_menu)) : ?>
-  <!-- menu error? -->
-    <?php //print theme('links', array('links' => $main_menu, 'attributes' => array('class' => 'links'))) ?>
+    <?php print theme('links', array('links' => $main_menu, 'attributes' => array('class' => 'menu main-menu'))) ?>
   <?php endif; ?>
   <?php if (isset($secondary_menu)) : ?>
-  <!-- menu error? -->
-    <?php //print theme('links', array('links' => $secondary_menu, 'attributes' => array('class' => 'links'))) ?>
+    <?php print theme('links', array('links' => $secondary_menu, 'attributes' => array('class' => 'button-bar col_12 column right secondary-menu'))) ?>
   <?php endif; ?>
 </div>
 

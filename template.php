@@ -806,3 +806,33 @@ function hks_system_admin_index($vars) {
 
   return $output;
 }
+
+/* == UTILITIES == */
+
+/**
+* Calls cache_get() specifically for HKS caches. (from Pure theme)
+* // Store the theme data in a static variable.
+* $themes_active = &drupal_static(__FUNCTION__, array());
+*
+* @param $type
+* The cache being accessed.
+*
+* @return
+* An array of cached data.
+*/
+function _hks_cache_get($type) {
+  if ($cache = cache_get('theme_registry:hks:' . $type . ':' . $GLOBALS['theme'])) {
+    return $cache;
+  }
+}
+/**
+* Calls cache_set() specifically for HKS based caches. (from Pure theme)
+*
+* @param $type
+* The cache being written.
+* @param $data
+* The data to be cached.
+*/
+function _hks_cache_set($type, $data) {
+  cache_set('theme_registry:hks:' . $type . ':' . $GLOBALS['theme'], $data);
+}

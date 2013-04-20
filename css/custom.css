@@ -74,6 +74,16 @@ text-shadow: 0px 0px 1px transparent; /* google font pixelation fix */
 }
 
 /*---------------------------------
+	MENU
+	@TODO make into a theme setting
+-----------------------------------
+ul.secondary-menu {
+  margin-top: -38px;
+  z-index: 1000;
+}
+*/
+
+/*---------------------------------
 	EXTRA UNUSED CLASSES
 -----------------------------------*/
 .wrap{
