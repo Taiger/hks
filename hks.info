@@ -18,18 +18,29 @@ regions[page_bottom] = Page bottom
 regions[highlighted] = Highlighted
 
 ; Stylesheets =================================================================
+; based on kickstart
+stylesheets[screen][] = css/kickstart/kickstart-buttons.css
+stylesheets[screen][] = css/kickstart/kickstart-forms.css
+stylesheets[screen][] = css/kickstart/kickstart-menus.css
+stylesheets[screen][] = css/kickstart/kickstart-grid.css
+;stylesheets[screen][] = css/kickstart/jquery.fancybox-1.3.4.css
+;stylesheets[screen][] = css/kickstart/kickstart-slideshow.css
+stylesheets[screen][] = css/kickstart/prettify.css
+;stylesheets[screen][] = css/kickstart/tiptip.css
+;TODO update the newest version of Font Awesome
+stylesheets[screen][] = css/kickstart/fonts/fontawesome/css/font-awesome.min.css
 
 stylesheets[screen][] = css/kickstart/kickstart.css
+
 stylesheets[screen][] = css/drupal.css
 stylesheets[screen][] = css/custom.css
-
 
 ; Scripts =====================================================================
 
 ;  = jquery plugins = 
 scripts[] = js/jquery_plugins/html5shiv_3.6.2.min.js
 
-; DISABLED JS for kickstarter - @TODO conditionally add these
+; DISABLED JS for kickstarter - @TODO conditionally add these with theme-settings
 
 ;scripts[] = js/jquery_plugins/fitvids_1.0.min.js
 ;scripts[] = js/jquery_plugins/prettify.min.js

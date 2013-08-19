@@ -114,9 +114,14 @@ function hks_preprocess_page(&$vars) {
   }
 
   $main = $grid - $side1 - $side2;
+
   $vars['main_content_class'] = 'col_' . $main;
   $vars['sidebar_first_class'] = 'col_' . $side1;
   $vars['sidebar_second_class'] = 'col_' . $side2;
+
+  if(!$vars['page']['sidebar_first'] && !$vars['page']['sidebar_second'] ){
+    unset($vars['main_content_class']);
+  }
 
 }
 
@@ -252,7 +257,7 @@ function hks_preprocess_fieldset(&$vars) {
 function hks_preprocess_field(&$vars) {
   // Add prose class to long text fields.
   if ($vars['element']['#field_type'] === 'text_with_summary') {
-    $vars['classes_array'][] = 'prose';
+    $vars['classes_array'][] = 'summary';
   }
 }
 
@@ -263,6 +268,15 @@ function hks_preprocess_table(&$vars){
 /**
  * Function overrides =================================================
  */
+
+function hks_field($vars) {
+  $output = '';
+
+    foreach ($vars['items'] as $delta => $item) {
+    $output .= drupal_render($item);
+  }
+  return $output;
+}
 
 /**
  * Override of theme('textarea').

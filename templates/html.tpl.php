@@ -16,5 +16,6 @@
   <?php print $page; ?>
   <?php print $page_bottom; ?>
   <div><!-- /.grid /.wrap-->
+    
 </body>
 </html>
