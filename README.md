@@ -1,3 +1,16 @@
+Frozen development on this project to focus on a new version using a different css-framework. HTML Kickstart can work for some projects so I will keep it. Also, a small site I built is dependent upon it.
+
+I am reusing the Drupal parts of the this theme to implement a different CSS Framework called Uikit.
+Advantages of Uikit over Html Kickstart are:
+CSS preprocessor integration using LESS.
+Better structure and organization.
+All classes and they are name-spaced which makes integrating with Drupal easier.
+You can read about Uikit here:
+https://github.com/uikit/uikit
+
+You can see the Drupal theme for Uikit here:
+https://github.com/Taiger/uikit
+-----------------
 HTML Kickstart For Drupal is an ultra-lean theme that utilizes the CSS and JS helper framework from Lime99. It is a responsive layout system with optional 12-grid columns. It utilizes vector Font Awesome Icons!
 
 In the spirit of Mothership and modern standards a lot of the Drupal frontend has been cleaned up in this theme. Though it is not as comprehensive as Mothership this theme could cause layout issues. This is mitigated by the responsive layout. So far I have found that the layouts to be remarkably robust considering how little CSS is behind it.
@@ -9,32 +22,14 @@ I borrowed from Mothership, Zen and Tao themes. With almost all default CSS remo
 Read more about HTML Kickstart here:
 http://www.99lime.com/elements/
 
-Needed:
-Testers!
-Tell what breaks and where.
 
-TODO:
-Move most of this stuff into cached theme settings ala Omega.
-
-
-
-====================================================================================================================
+=============================================================
 Copyright for HTML Kickstart Drupal Theme
-====================================================================================================================
+=============================================================
 HTML Kickstart for Drupal is released under the GNU GENERAL PUBLIC LICENSE, Version 3
 http://www.gnu.org/licenses/gpl.html
 Drupal Theme by Tai Travis
 http://newsparkdesigns.com | New Spark Designs
 Contact me at http://newsparkdesigns.com/contact
 
-====================================================================================================================
-Original Copyright for HTML Kickstart
-====================================================================================================================
-Release Under the MIT Open Source License.
-Copyright © 2011-2012 Joshua Gatcke http://www.99lime.com | HTML KickStart
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+=============================================================
