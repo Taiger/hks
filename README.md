@@ -1,3 +1,5 @@
+I am working on a new base theme for Drupal 8!
+==
 Frozen development on this project to focus on a new version using a different css-framework. HTML Kickstart can work for some projects so I will keep it. Also, a small site I built is dependent upon it.
 
 I am reusing the Drupal parts of the this theme to implement a different CSS Framework called Uikit.
